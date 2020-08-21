@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/2575-Christmas-Tree.dir/src/main.cpp.o  -o 2575-Christmas-Tree 

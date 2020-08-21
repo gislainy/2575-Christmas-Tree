@@ -19,19 +19,27 @@
     <select />
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated />
+    <generated>
+      <config projectName="2575-Christmas-Tree" targetName="2575-Christmas-Tree" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Debug-Coverage" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_CXX_FLAGS=--coverage -DCMAKE_C_FLAGS=--coverage" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bc853dc-c20f-41ca-9dcd-7b1136aafe57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/2575-Christmas-Tree.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ChristmasTree.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ChristmasTree.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backup.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lista.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usecase.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/2575-Christmas-Tree.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/2575-Christmas-Tree.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +49,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -57,6 +66,20 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="2575-Christmas-Tree" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="2575-Christmas-Tree" TARGET_NAME="2575-Christmas-Tree" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="2575-Christmas-Tree" RUN_TARGET_NAME="2575-Christmas-Tree">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -66,7 +89,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596993864732</updated>
-      <workItem from="1596993866076" duration="622000" />
+      <workItem from="1596993866076" duration="12432000" />
+      <workItem from="1597015057121" duration="4522000" />
+      <workItem from="1597105199036" duration="718000" />
+      <workItem from="1597528567746" duration="26137000" />
+      <workItem from="1597597027070" duration="5907000" />
+      <workItem from="1597802896759" duration="9134000" />
+      <workItem from="1597871914616" duration="4603000" />
+      <workItem from="1597972091812" duration="9907000" />
     </task>
     <servers />
   </component>
@@ -83,5 +113,98 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1605" y="357" width="590" height="400" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597536829845">
+      <screen x="0" y="27" width="2560" height="1053" />
+    </state>
+    <state x="1605" y="357" width="590" height="400" key="#com.intellij.fileTypes.FileTypeChooser/0.27.2560.1053/2560.0.1920.1080@0.27.2560.1053" timestamp="1597536829845" />
+    <state x="1653" y="303" width="524" height="508" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597536855595">
+      <screen x="0" y="27" width="2560" height="1053" />
+    </state>
+    <state x="1653" y="303" width="524" height="508" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.2560.1053/2560.0.1920.1080@0.27.2560.1053" timestamp="1597536855595" />
+    <state x="1049" y="253" key="#xdebugger.evaluate" timestamp="1597894626621">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="1049" y="253" key="#xdebugger.evaluate/0.27.1600.873/2560.0.1920.1080@0.27.1600.873" timestamp="1597894626621" />
+    <state x="1049" y="253" key="#xdebugger.evaluate/0.27.1600.873@0.27.1600.873" timestamp="1597812037335" />
+    <state x="1678" y="300" key="#xdebugger.evaluate/0.27.2560.1053/2560.0.1920.1080@0.27.2560.1053" timestamp="1597600179877" />
+    <state width="422" height="485" key="DebuggerActiveHint" timestamp="1597554997340">
+      <screen x="0" y="27" width="2560" height="1053" />
+    </state>
+    <state width="422" height="485" key="DebuggerActiveHint/0.27.2560.1053/2560.0.1920.1080@0.27.2560.1053" timestamp="1597554997340" />
+    <state x="1654" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1596996369756">
+      <screen x="0" y="27" width="2560" height="1053" />
+    </state>
+    <state x="1654" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.2560.1053/2560.0.1920.1080@0.27.2560.1053" timestamp="1596996369756" />
+    <state width="758" height="316" key="GridCell.Tab.0.bottom" timestamp="1597981766940">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="995" height="316" key="GridCell.Tab.0.bottom/0.27.1600.873/2560.0.1920.1080@0.27.1600.873" timestamp="1597895289528" />
+    <state width="758" height="316" key="GridCell.Tab.0.bottom/0.27.1600.873@0.27.1600.873" timestamp="1597981766940" />
+    <state width="1238" height="364" key="GridCell.Tab.0.bottom/0.27.2560.1053/2560.0.1920.1080@0.27.2560.1053" timestamp="1597873976313" />
+    <state width="758" height="316" key="GridCell.Tab.0.center" timestamp="1597981766939">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="995" height="316" key="GridCell.Tab.0.center/0.27.1600.873/2560.0.1920.1080@0.27.1600.873" timestamp="1597895289528" />
+    <state width="758" height="316" key="GridCell.Tab.0.center/0.27.1600.873@0.27.1600.873" timestamp="1597981766939" />
+    <state width="1238" height="364" key="GridCell.Tab.0.center/0.27.2560.1053/2560.0.1920.1080@0.27.2560.1053" timestamp="1597873976313" />
+    <state width="758" height="316" key="GridCell.Tab.0.left" timestamp="1597981766938">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="995" height="316" key="GridCell.Tab.0.left/0.27.1600.873/2560.0.1920.1080@0.27.1600.873" timestamp="1597895289527" />
+    <state width="758" height="316" key="GridCell.Tab.0.left/0.27.1600.873@0.27.1600.873" timestamp="1597981766938" />
+    <state width="1238" height="364" key="GridCell.Tab.0.left/0.27.2560.1053/2560.0.1920.1080@0.27.2560.1053" timestamp="1597873976313" />
+    <state width="758" height="316" key="GridCell.Tab.0.right" timestamp="1597981766939">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="995" height="316" key="GridCell.Tab.0.right/0.27.1600.873/2560.0.1920.1080@0.27.1600.873" timestamp="1597895289528" />
+    <state width="758" height="316" key="GridCell.Tab.0.right/0.27.1600.873@0.27.1600.873" timestamp="1597981766939" />
+    <state width="1238" height="364" key="GridCell.Tab.0.right/0.27.2560.1053/2560.0.1920.1080@0.27.2560.1053" timestamp="1597873976313" />
+    <state width="758" height="337" key="GridCell.Tab.1.bottom" timestamp="1597981520253">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1558" height="337" key="GridCell.Tab.1.bottom/0.27.1600.873/2560.0.1920.1080@0.27.1600.873" timestamp="1597894665261" />
+    <state width="758" height="337" key="GridCell.Tab.1.bottom/0.27.1600.873@0.27.1600.873" timestamp="1597981520253" />
+    <state width="1238" height="426" key="GridCell.Tab.1.bottom/0.27.2560.1053/2560.0.1920.1080@0.27.2560.1053" timestamp="1597873076182" />
+    <state width="758" height="337" key="GridCell.Tab.1.center" timestamp="1597981520252">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1558" height="337" key="GridCell.Tab.1.center/0.27.1600.873/2560.0.1920.1080@0.27.1600.873" timestamp="1597894665261" />
+    <state width="758" height="337" key="GridCell.Tab.1.center/0.27.1600.873@0.27.1600.873" timestamp="1597981520252" />
+    <state width="1238" height="426" key="GridCell.Tab.1.center/0.27.2560.1053/2560.0.1920.1080@0.27.2560.1053" timestamp="1597873076181" />
+    <state width="758" height="337" key="GridCell.Tab.1.left" timestamp="1597981520252">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1558" height="337" key="GridCell.Tab.1.left/0.27.1600.873/2560.0.1920.1080@0.27.1600.873" timestamp="1597894665261" />
+    <state width="758" height="337" key="GridCell.Tab.1.left/0.27.1600.873@0.27.1600.873" timestamp="1597981520252" />
+    <state width="1238" height="426" key="GridCell.Tab.1.left/0.27.2560.1053/2560.0.1920.1080@0.27.2560.1053" timestamp="1597873076181" />
+    <state width="758" height="337" key="GridCell.Tab.1.right" timestamp="1597981520253">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1558" height="337" key="GridCell.Tab.1.right/0.27.1600.873/2560.0.1920.1080@0.27.1600.873" timestamp="1597894665261" />
+    <state width="758" height="337" key="GridCell.Tab.1.right/0.27.1600.873@0.27.1600.873" timestamp="1597981520253" />
+    <state width="1238" height="426" key="GridCell.Tab.1.right/0.27.2560.1053/2560.0.1920.1080@0.27.2560.1053" timestamp="1597873076182" />
+    <state x="383" y="209" width="824" height="515" key="IDE.errors.dialog" timestamp="1597972291109">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="383" y="209" width="824" height="515" key="IDE.errors.dialog/0.27.1600.873@0.27.1600.873" timestamp="1597972291109" />
+    <state x="1380" y="127" width="1080" height="853" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1597537324483">
+      <screen x="0" y="27" width="2560" height="1053" />
+    </state>
+    <state x="1380" y="127" width="1080" height="853" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.27.2560.1053/2560.0.1920.1080@0.27.2560.1053" timestamp="1597537324483" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1596996557274">
+      <screen x="0" y="27" width="2560" height="1053" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.27.2560.1053/2560.0.1920.1080@0.27.2560.1053" timestamp="1596996557274" />
+    <state x="463" y="214" width="672" height="678" key="search.everywhere.popup" timestamp="1597976702017">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="463" y="214" width="672" height="678" key="search.everywhere.popup/0.27.1600.873/2560.0.1920.1080@0.27.1600.873" timestamp="1596998550806" />
+    <state x="463" y="214" width="672" height="678" key="search.everywhere.popup/0.27.1600.873@0.27.1600.873" timestamp="1597976702017" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="../../../Personal/2575-Christmas-Tree/cmake-build-debug-coverage" NAME="2575-Christmas-Tree Coverage Results" MODIFIED="1597535160526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

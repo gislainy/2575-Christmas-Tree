@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gislainy/Personal/2575-Christmas-Tree/src/main.cpp
+iostream
+/home/gislainy/Personal/2575-Christmas-Tree/src/iostream
+
