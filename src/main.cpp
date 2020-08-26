@@ -18,13 +18,15 @@ typedef struct Queue
     struct Queue *next;
 } Queue;
 
-void insertNode(ChistmasTree *root, int branch, int value, int beauty);
-void nodeForEachOnQueue(Queue *queue, int branch, int value, int beauty);
 void freeTree(ChistmasTree *tree);
 void showTree(ChistmasTree *tree);
+void setSubTreeWithCut(ChistmasTree *tree);
+void getNodesThatValuesIsNegative(ChistmasTree *tree, Queue *queue);
+void nodesThatMustBeRemoved(ChistmasTree *tree, int beauty);
+void insertNode(ChistmasTree *root, int branch, int value, int beauty);
+void nodeForEachOnQueueAndInsertNodeOnTree(Queue *queue, int branch, int value, int beauty);
 int calculateChristmasTreeBeauty(ChistmasTree *tree);
 int getNumberOfNodesToRemove(ChistmasTree *tree, int beauty);
-void nodesThatMustBeRemoved(ChistmasTree *tree, int beauty);
 Queue *createNodeOnQueue();
 Queue *insertNodeOnQueue(Queue *queue, ChistmasTree *value);
 ChistmasTree *createTreeOrSubTree();
@@ -57,7 +59,7 @@ Queue *insertNodeOnQueue(Queue *queue, ChistmasTree *value)
     }
 }
 
-void nodeForEachOnQueue(Queue *queue, int branch, int value, int beauty)
+void nodeForEachOnQueueAndInsertNodeOnTree(Queue *queue, int branch, int value, int beauty)
 {
     if (queue->next == NULL)
         return;
@@ -121,7 +123,11 @@ void showTree(ChistmasTree *tree)
 {
     if (tree != NULL)
     {
-        cout << tree->value << " (" << tree->branch << ")"
+        int root = tree->root != NULL ? tree->root->value : -1;
+        int branch = tree->root != NULL ? tree->root->branch : -1;
+        cout << tree->value
+             << " (" << root << " - " << branch << ")"
+             << " (" << tree->branch << ")"
              << " (" << tree->cut << ")"
              << " (" << tree->beauty << ")\n";
         showTree(tree->first);
@@ -139,28 +145,7 @@ void insertNode(ChistmasTree *root, int branch, int value, int beauty)
             subTree->cut = 1;
         subTree->value = value;
         subTree->branch = branch;
-        if (root != NULL && root->cut == 1 && root->beauty <= 0)
-        {
-            if ((beauty + root->beauty) > 0)
-            {
-                root->cut = 0;
-                if (root->first != NULL && root->first->beauty > 0)
-                {
-                    root->first->cut = 0;
-                }
-                if (root->next != NULL && root->next->beauty > 0)
-                {
-                    root->next->cut = 0;
-                }
-            }
-        }
-
-        if (root->cut == 1)
-            subTree->cut = 1;
-
-        if (root->value == value && root->beauty == 0)
-            root->beauty = beauty;
-
+        root->cut = 0;
         subTree->next = root->first;
         root->first = subTree;
         subTree->root = root;
@@ -225,6 +210,56 @@ void nodesThatMustBeRemoved(ChistmasTree *tree, int beauty)
     }
 }
 
+void setSubTreeWithCut(ChistmasTree *tree)
+{
+    if (tree != NULL)
+    {
+        tree->cut = 1;
+        setSubTreeWithCut(tree->first);
+        setSubTreeWithCut(tree->next);
+    }
+}
+
+void nodeForEachOnQueue(Queue *queue)
+{
+    if (queue->next == NULL)
+        return;
+
+    Queue *temporaryNode = queue->next;
+
+    do
+    {
+        if (temporaryNode != NULL && temporaryNode->value != NULL) {
+            ChistmasTree *tree = temporaryNode->value;
+//            int root = tree->root != NULL ? tree->root->value : -1;
+//            int branch = tree->root != NULL ? tree->root->branch : -1;
+            int beauty = calculateChristmasTreeBeauty(tree);
+            if (beauty < 0)
+                setSubTreeWithCut(tree);
+
+//            cout << tree->value
+//                 << " (" << root << " - " << branch << ")"
+//                 << " ( Branch:" << tree->branch << ")"
+//                 << " ( Cut: " << tree->cut << ")"
+//                 << " ( Beleza: " << beauty << ")"
+//                 << " (" << tree->beauty << ")\n";
+        }
+        temporaryNode = temporaryNode->next;
+    } while (temporaryNode != NULL);
+}
+
+void getNodesThatValuesIsNegative(ChistmasTree *tree, Queue *queue)
+{
+    if (tree != NULL)
+    {
+        if (tree->beauty < 0 && tree->cut != 1) {
+            insertNodeOnQueue(queue, tree);
+        }
+        getNodesThatValuesIsNegative(tree->first, queue);
+        getNodesThatValuesIsNegative(tree->next, queue);
+    }
+}
+
 int main()
 {
     ChistmasTree *tree = createTreeOrSubTree();
@@ -232,8 +267,7 @@ int main()
     Queue *queue;
     int n;
     int di, ai, bi, wi;
-    cin >> n;
-    cin.ignore();
+    scanf("%d", &n);
     /**
      * Verifica se a entrada é válida N (2 < N < 10^6)
      */
@@ -244,11 +278,11 @@ int main()
     }
     for (int i = 0; i < n - 1; i++)
     {
-        if (scanf("%d %d %d %d", &di, &ai, &bi, &wi) != EOF)
-        {
+        scanf("%d %d %d %d", &di, &ai, &bi, &wi);
 
-            if ((di >= 0 && di <= n - 2) && (ai >= 0 && ai <= n - 1) && (bi >= 0 && bi <= n - 1) && (wi >= -1000 && wi <= 1000))
-            {
+
+//            if ((di >= 0 && di <= n - 2) && (ai >= 0 && ai <= n - 1) && (bi >= 0 && bi <= n - 1) && (wi >= -1000 && wi <= 1000))
+//            {
                 queue = createNodeOnQueue();
                 int search = ai < bi ? ai : bi;
                 int value = ai < bi ? bi : ai;
@@ -257,36 +291,50 @@ int main()
                 else
                     searchNodeAndInsertNode(tree, search, queue);
 
-                nodeForEachOnQueue(queue, di, value, wi);
+                nodeForEachOnQueueAndInsertNodeOnTree(queue, di, value, wi);
                 freeQueue(queue);
-            }
-        }
+//            }
+
     }
 
     if (tree->first != NULL || tree->next != NULL)
     {
+        queue = createNodeOnQueue();
+
+        getNodesThatValuesIsNegative(tree, queue);
+        nodeForEachOnQueue(queue);
         int beautyTree = calculateChristmasTreeBeauty(tree);
         int numberOfNodesToRemove = getNumberOfNodesToRemove(tree, beautyTree);
-        cout << beautyTree << " " << numberOfNodesToRemove << endl;
-        if (numberOfNodesToRemove)
+
+        if (beautyTree > 0)
         {
+            cout << beautyTree << " " << numberOfNodesToRemove << endl;
             nodesThatMustBeRemoved(tree, beautyTree);
             cout << endl;
+        }  else
+        {
+            cout << "0 1" << endl;
+            cout << "0" << endl;
         }
+        freeQueue(queue);
     }
     else
     {
         int beautyAlternative = calculateChristmasTreeBeauty(alternativeTree);
         int numberOfNodesToRemove = getNumberOfNodesToRemove(alternativeTree, beautyAlternative);
-        cout << beautyAlternative << " " << numberOfNodesToRemove << endl;
-        if (numberOfNodesToRemove)
+
+        if (beautyAlternative > 0)
         {
+            cout << beautyAlternative << " " << numberOfNodesToRemove << endl;
             nodesThatMustBeRemoved(alternativeTree, beautyAlternative);
             cout << endl;
+        } else {
+            cout << "0 1" << endl;
+            cout << "0" << endl;
         }
     }
-    //    cout << endl;
-    //    showTree(tree);
+//        cout << endl;
+//        showTree(tree);
     //    cout << endl;
     //    showTree(alternativeTree);
     freeTree(tree);
