@@ -37,12 +37,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bc853dc-c20f-41ca-9dcd-7b1136aafe57" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/2575-Christmas-Tree" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/2575-Christmas-Tree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/2575-Christmas-Tree.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/2575-Christmas-Tree.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/2575-Christmas-Tree.dir/src/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/2575-Christmas-Tree.dir/src/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usecase.txt" beforeDir="false" afterPath="$PROJECT_DIR$/usecase.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,11 +55,15 @@
     <option name="directoryName" value="vsh9cfzv" />
   </component>
   <component name="ProjectId" id="1fs5Gd14281JkXrefwwMr3UNnxc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
@@ -105,7 +104,7 @@
       <workItem from="1598572273858" duration="11075000" />
       <workItem from="1598655487479" duration="11049000" />
       <workItem from="1598722278929" duration="7418000" />
-      <workItem from="1598808025670" duration="2338000" />
+      <workItem from="1598808025670" duration="2604000" />
     </task>
     <servers />
   </component>
@@ -135,6 +134,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1500" y="197" width="800" height="719" key="#Plugins" timestamp="1598308000119">

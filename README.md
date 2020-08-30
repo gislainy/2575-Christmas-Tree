@@ -1,6 +1,9 @@
 ## 2575-Christmas-Tree
 Resolution of the problem 2575 Christmas Tree of https://www.urionlinejudge.com.br/judge/en/problems/view/2575
 
+The implementation report is in this repository in Portuguese https://github.com/gislainy/RelatorioImplementacaoArvoreDeNatal 
+
+
 # Christmas Tree
 
 Roberto is in love with Christmas trees. Every year, he adorns the trees of Itajubá with the most beautiful ornaments. Therefore, this year he was invited by the mayor of Belo Horizonte to decorate the Christmas trees that will be placed at the end of the year. For this, Roberto will prune branches from the trees that he thinks are ugly. For each branch i of the tree, Roberto defined how beautiful he is by a number wi. Negative values ​​represent that the branch is ugly. The beauty of a Christmas tree is then defined by the sum of the beauties of its branches.
