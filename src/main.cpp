@@ -193,15 +193,14 @@ void insertNodeOnTree(ChistmasTree *root, int branch, int value, int beauty) {
  * @param queue
  */
 void searchNodeAndInsertNodeOnQueue(ChistmasTree *tree, int search, Queue *queue) {
-    if (tree == NULL) {
-        return NULL;
-    } else if (tree->value == search) {
-        insertNodeOnQueue(queue, tree);
+    if (tree != NULL) {
+        if (tree->value == search) {
+            insertNodeOnQueue(queue, tree);
+        }
+        searchNodeAndInsertNodeOnQueue(tree->first, search, queue);
+
+        searchNodeAndInsertNodeOnQueue(tree->next, search, queue);
     }
-
-    searchNodeAndInsertNodeOnQueue(tree->first, search, queue);
-
-    searchNodeAndInsertNodeOnQueue(tree->next, search, queue);
 }
 
 /**
